@@ -21,7 +21,7 @@ public class Login extends HttpServlet {
         String password = get_SHA_1_SecurePassword(password1, salt);
 
       Class.forName("com.mysql.jdbc.Driver");//loads and registers mysql.jdbc drivers
-        Connection con= DriverManager.getConnection("jdbc:mysql://localhost:3306/NAD","root","the3demos.");//define the connection URL and establish the connection
+        Connection con= DriverManager.getConnection("jdbc:mysql://localhost:3306/NAD","root","");//define the connection URL and establish the connection
 
     PreparedStatement ps = con.prepareStatement("SELECT UserName,Password from USERS where UserName=? and Password=?");
 		ps.setString(1, username);
