@@ -31,7 +31,7 @@ public class Registration extends HttpServlet {
 
 
       Class.forName("com.mysql.jdbc.Driver");//loads and registers mysql.jdbc drivers
-        Connection con= DriverManager.getConnection("jdbc:mysql://localhost:3306/NAD","root","the3demos.");//define the connection URL and establish the connection
+        Connection con= DriverManager.getConnection("jdbc:mysql://localhost:3306/NAD","root","");//define the connection URL and establish the connection
 
      Statement st= con.createStatement();//create the statement
      String sql = "INSERT INTO USERS VALUES ('"+fname+"','" +  lname+"','" +  username+"','" +  address+"','" +  phone_number+"','" +  password+"','" +  email+"')";
